@@ -39,7 +39,7 @@ const Chart = () => {
   ) : null;
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Chart</h1>
       {lineChart}
     </div>
