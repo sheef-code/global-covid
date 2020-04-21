@@ -46,10 +46,10 @@ class SimpleTabs extends React.Component {
               value={this.state.value}
               indicatorColor="primary"
               onChange={this.handleChange}
+              centered
             >
               <Tab label="Overview" />
               <Tab label="Symptoms" />
-              <Tab label="Prevention" />
               <Tab label="Treatment" />
             </Tabs>
           </AppBar>
@@ -82,6 +82,16 @@ class SimpleTabs extends React.Component {
           )}
           {value === 2 && (
             <TabContainer>
+              To date, there are no specific vaccines or medicines for COVID-19.
+              Treatments are under investigation, and will be tested through
+              clinical trials. <br></br>
+              <hr></hr>
+              Medical treatments If you have mild symptoms and are otherwise
+              healthy, self-isolate and contact your medical provider or a
+              COVID-19 information line for advice. Seek medical care if you
+              have a fever, a cough, and difficulty breathing. Call in advance.
+              <br></br>
+              <br></br>
               Top COVID-19 Prevention Tips.
               <br></br>
               <hr></hr>
@@ -100,18 +110,6 @@ class SimpleTabs extends React.Component {
               <li>
                 <b>SICK?</b> Call ahead
               </li>
-            </TabContainer>
-          )}
-          {value === 3 && (
-            <TabContainer>
-              To date, there are no specific vaccines or medicines for COVID-19.
-              Treatments are under investigation, and will be tested through
-              clinical trials. <br></br>
-              <hr></hr>
-              Medical treatments If you have mild symptoms and are otherwise
-              healthy, self-isolate and contact your medical provider or a
-              COVID-19 information line for advice. Seek medical care if you
-              have a fever, a cough, and difficulty breathing. Call in advance.
             </TabContainer>
           )}
         </div>
