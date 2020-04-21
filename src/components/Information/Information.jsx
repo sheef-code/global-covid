@@ -67,7 +67,6 @@ class SimpleTabs extends React.Component {
               people will develop mild to moderate symptoms.
               <br></br>
               <hr></hr>
-              <br></br>
               Common symptoms:<br></br>
               <li>fever</li>
               <li>tiredness</li>
@@ -86,7 +85,6 @@ class SimpleTabs extends React.Component {
               Top COVID-19 Prevention Tips.
               <br></br>
               <hr></hr>
-              <br></br>
               <li>
                 <b>STAY</b> home as much as you can
               </li>
@@ -110,11 +108,10 @@ class SimpleTabs extends React.Component {
               Treatments are under investigation, and will be tested through
               clinical trials. <br></br>
               <hr></hr>
-              <br></br> Medical treatments If you have mild symptoms and are
-              otherwise healthy, self-isolate and contact your medical provider
-              or a COVID-19 information line for advice. Seek medical care if
-              you have a fever, a cough, and difficulty breathing. Call in
-              advance.
+              Medical treatments If you have mild symptoms and are otherwise
+              healthy, self-isolate and contact your medical provider or a
+              COVID-19 information line for advice. Seek medical care if you
+              have a fever, a cough, and difficulty breathing. Call in advance.
             </TabContainer>
           )}
         </div>
