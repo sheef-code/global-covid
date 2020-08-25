@@ -26,7 +26,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             </Typography>
             <Typography variant="h5" component="h2">
               <CountUp
-                start={0}
+                start={1000000}
                 end={confirmed.value}
                 duration={1}
                 separator=","
@@ -53,7 +53,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             </Typography>
             <Typography variant="h5" component="h2">
               <CountUp
-                start={0}
+                start={1000000}
                 end={recovered.value}
                 duration={1}
                 separator=","
@@ -80,7 +80,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             </Typography>
             <Typography variant="h5" component="h2">
               <CountUp
-                start={0}
+                start={100000}
                 end={deaths.value}
                 duration={1}
                 separator=","

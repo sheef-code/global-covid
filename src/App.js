@@ -1,39 +1,21 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
+import { Header } from "./components";
 
-import { Cards, CountryOptions, Chart, Header } from "./components";
-import { fetchData } from "./api/";
+import HomePage from "./pages/HomePage/HomePage.jsx";
+import MapPage from "./pages/MapPage/MapPage.jsx";
+
 import styles from "./App.module.css";
-class App extends React.Component {
-  state = {
-    data: {},
-    country: "",
-  };
-
-  async componentDidMount() {
-    const data = await fetchData();
-
-    this.setState({ data });
-  }
-
-  handleCountryChange = async (country) => {
-    const fetchedData = await fetchData(country);
-    console.log(fetchedData);
-    this.setState({ data: fetchedData, country: country });
-  };
-
-  render() {
-    const { data, country } = this.state;
-    console.log(data);
-    return (
-      <div className={styles.container}>
-        <Header />
-        <h1 className={styles.container__title}>CORONAVIRUS TRACKER</h1>
-        <Cards data={data} />
-        <CountryOptions handleCountryChange={this.handleCountryChange} />
-        <Chart data={data} country={country} />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className={styles.container}>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/map" component={MapPage} />
+      </Switch>
+    </div>
+  );
+};
 
 export default App;

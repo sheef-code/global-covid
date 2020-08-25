@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
 body {
   background-color: rgb(250, 250, 250);
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Oswald", "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 .container {
@@ -9,9 +11,7 @@ body {
   flex-direction: column;
 }
 
-.container__title {
-  color: #f28d53;
-  margin-top: 50px;
-  margin-bottom: 0px;
-  filter: drop-shadow(1px 1px 1px #aaa);
+.leaflet-container {
+  height: 400px;
+  width: 800px;
 }
