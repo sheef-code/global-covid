@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Cards, CountryOptions, Chart, Information } from "./components";
+import { Cards, CountryOptions, Chart, Header } from "./components";
 import { fetchData } from "./api/";
 import styles from "./App.module.css";
 class App extends React.Component {
@@ -23,11 +23,11 @@ class App extends React.Component {
 
   render() {
     const { data, country } = this.state;
-
+    console.log(data);
     return (
       <div className={styles.container}>
-        <Information />
-        <h1>GLOBALCOVID.INFO - CORONAVIRUS TRACKER</h1>
+        <Header />
+        <h1 className={styles.container__title}>CORONAVIRUS TRACKER</h1>
         <Cards data={data} />
         <CountryOptions handleCountryChange={this.handleCountryChange} />
         <Chart data={data} country={country} />
