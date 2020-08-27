@@ -1,7 +1,6 @@
 .title {
   color: #f28d53;
-  margin-top: 50px;
-  margin-bottom: 0px;
+  margin: 50px 0px;
   filter: drop-shadow(1px 1px 1px #aaa);
   border-bottom: 5px dashed;
 }

@@ -1,0 +1,41 @@
+export const information = {
+  overview:
+    "COVID-19 is a disease caused by a coronavirus called SARS-CoV-2. Older adults and people who have severe underlying medical conditions like heart or lung disease or diabetes seem to be at higher risk for developing more serious complications from COVID-19 illness.",
+  symptoms: [
+    "Fever or chills",
+    "Cough",
+    "Shortness of breath or difficulty breathing",
+    "Fatigue",
+    "Muscle or body aches",
+    "Headache",
+    "New loss of taste or smell",
+    "Sore throat",
+    "Congestion or runny nose",
+    "Nausea or vomiting",
+    "Diarrhea",
+  ],
+  emergency: [
+    "Trouble breathing",
+    "Persistent pain or pressure in the chest",
+    "New confusion",
+    "Inability to wake or stay awake",
+    "Bluish lips or face",
+  ],
+  prevention: [
+    "Clean your hands often, either with soap and water for 20 seconds or a hand sanitizer that contains at least 60% alcohol.",
+    "Avoid close contact with people who are sick.",
+    "Put distance between yourself and other people (at least 6 feet).",
+    "Cover your mouth and nose with a mask when around others.",
+    "Cover your cough or sneeze with a tissue, then throw the tissue in the trash.",
+    "Clean and disinfect frequently touched objects and surfaces daily.",
+    "CDC recommends that people wear masks in public settings and when around people outside of their household, especially when other social distancing measures are difficult to maintain.",
+    "Masks may help prevent people who have COVID-19 from spreading the virus to others.",
+  ],
+  treatment: [
+    "Stay home except to get medical care.",
+    "Monitor your symptoms carefully. If your symptoms get worse, call your healthcare provider immediately.",
+    "Get rest and stay hydrated. Take over-the-counter medicines, such as acetaminophen, to help you feel better.",
+    "If you have a medical appointment, notify your healthcare provider ahead of time that you have or may have COVID-19.",
+    "Stay in a specific room and away from other people in your home. If possible, use a separate bathroom. If you must be around others, wear a mask.",
+  ],
+};

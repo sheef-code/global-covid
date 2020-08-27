@@ -12,19 +12,17 @@ class HomePage extends React.Component {
 
   async componentDidMount() {
     const data = await fetchData();
-
     this.setState({ data });
   }
 
   handleCountryChange = async (country) => {
     const fetchedData = await fetchData(country);
-    console.log(fetchedData);
+
     this.setState({ data: fetchedData, country: country });
   };
 
   render() {
     const { data, country } = this.state;
-    console.log(data);
 
     return (
       <>

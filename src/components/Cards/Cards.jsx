@@ -5,11 +5,10 @@ import cx from "classnames";
 
 import styles from "./Cards.module.css";
 
-const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
-  if (!confirmed) {
+const Info = ({ data: { cases, recovered, deaths } }) => {
+  if (!cases) {
     return "Loading...";
   }
-
   return (
     <div className={styles.container}>
       <Grid container spacing={3} justify="center">
@@ -25,15 +24,10 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               Infected
             </Typography>
             <Typography variant="h5" component="h2">
-              <CountUp
-                start={1000000}
-                end={confirmed.value}
-                duration={1}
-                separator=","
-              />
+              <CountUp start={1000000} end={cases} duration={1} separator="," />
             </Typography>
             <Typography color="textSecondary">
-              {new Date(lastUpdate).toDateString()}
+              {`${Date()}`.slice(4, 15)}
             </Typography>
             <Typography variant="body2" component="p">
               Number of active cases of COVID-19.
@@ -54,13 +48,13 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             <Typography variant="h5" component="h2">
               <CountUp
                 start={1000000}
-                end={recovered.value}
+                end={recovered}
                 duration={1}
                 separator=","
               />
             </Typography>
             <Typography color="textSecondary">
-              {new Date(lastUpdate).toDateString()}
+              {`${Date()}`.slice(4, 15)}
             </Typography>
             <Typography variant="body2" component="p">
               Number of recoveries from COVID-19.
@@ -79,15 +73,10 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               Deaths
             </Typography>
             <Typography variant="h5" component="h2">
-              <CountUp
-                start={100000}
-                end={deaths.value}
-                duration={1}
-                separator=","
-              />
+              <CountUp start={100000} end={deaths} duration={1} separator="," />
             </Typography>
             <Typography color="textSecondary">
-              {new Date(lastUpdate).toDateString()}
+              {`${Date()}`.slice(4, 15)}
             </Typography>
             <Typography variant="body2" component="p">
               Number of deaths caused by COVID-19.
