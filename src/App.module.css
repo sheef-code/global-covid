@@ -13,8 +13,3 @@ body {
   flex-direction: column;
   overflow: hidden;
 }
-
-.leaflet-container {
-  height: 400px;
-  width: 800px;
-}

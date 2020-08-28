@@ -6,24 +6,31 @@
   align-items: center;
 }
 
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 .logo {
   max-height: 70px;
   display: flex;
 }
+
+.menuIcon {
+  display: none;
+}
+
 .title {
   color: #fff;
   font-size: 1.4rem;
   text-transform: uppercase;
 }
 
-.wrapper {
+.list {
   display: flex;
-  align-items: center;
-  width: 100%;
 }
-.menuIcon {
-  display: none;
-}
+
 .list a {
   color: #fff;
   font-size: 1.4rem;
@@ -59,7 +66,7 @@
 }
 
 @media (max-width: 1000px) {
-  .logoWrap {
+  .logoContainer {
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -68,6 +75,7 @@
   .title {
     display: none;
   }
+
   .listActive {
     display: flex;
     opacity: 1;
@@ -85,12 +93,14 @@
     border-top: 1px dashed #fff;
     box-shadow: 0px 5px 5px 0px #ccc;
   }
+
   .menuIcon {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     padding: 0rem 1rem;
   }
+
   .list {
     display: none;
   }

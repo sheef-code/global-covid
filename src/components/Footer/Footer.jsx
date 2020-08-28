@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./Footer.module.css";
+import footerStyles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
-      <h6>GLOBAL COVID &copy; 2020</h6>
+    <div className={footerStyles.footer}>
+      <h6>GLOBAL COVID TRACK &copy; 2020</h6>
     </div>
   );
 };

@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "./Table.module.css";
+import tableStyles from "./Table.module.css";
 import numeral from "numeral";
 
 function Table({ countries }) {
   let id = 1;
   return (
-    <div className={styles.table}>
+    <div className={tableStyles.table}>
       <table style={{ width: "100%" }}>
         <tbody>
           {countries.map((country) => (

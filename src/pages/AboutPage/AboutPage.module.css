@@ -5,24 +5,25 @@
   width: 100%;
 }
 
-.app__header {
+.header {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   justify-content: space-between;
 }
 
-.app__header > h1 {
+.header > h1 {
   color: #f28d53;
   font-size: 2rem;
   filter: drop-shadow(1px 1px 1px #aaa);
-  border-bottom: 5px dashed;
+  border-bottom: 5px solid;
   margin: 50px auto;
 }
 
 .content {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .card1 {
@@ -54,6 +55,6 @@
   }
   .card1,
   .card2 {
-    width: 85% !important;
+    width: 100% !important;
   }
 }

@@ -1,38 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Cards, CountryOptions, Chart } from "../../components";
 import { fetchData } from "../../api/";
 
-import styles from "./HomePage.module.css";
+import homeStyles from "./HomePage.module.css";
 
-class HomePage extends React.Component {
-  state = {
-    data: {},
-    country: "",
-  };
+const HomePage = () => {
+  const [data, setData] = useState({});
+  const [country, setCountry] = useState("");
 
-  async componentDidMount() {
-    const data = await fetchData();
-    this.setState({ data });
-  }
+  useEffect(() => {
+    const getData = async () => {
+      const dataSet = await fetchData();
+      setData(dataSet);
+    };
+    getData();
+  }, []);
 
-  handleCountryChange = async (country) => {
+  const handleCountryChange = async (country) => {
     const fetchedData = await fetchData(country);
-
-    this.setState({ data: fetchedData, country: country });
+    setData(fetchedData);
+    setCountry(country);
   };
 
-  render() {
-    const { data, country } = this.state;
-
-    return (
-      <>
-        <h1 className={styles.title}>CORONAVIRUS TRACKER</h1>
-        <Cards data={data} />
-        <CountryOptions handleCountryChange={this.handleCountryChange} />
-        <Chart data={data} country={country} />
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <h1 className={homeStyles.title}>CORONAVIRUS TRACKER</h1>
+      <Cards data={data} />
+      <CountryOptions handleCountryChange={handleCountryChange} />
+      <Chart data={data} country={country} />
+    </>
+  );
+};
 
 export default HomePage;

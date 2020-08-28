@@ -23,7 +23,6 @@ export const fetchData = async (country) => {
 export const fetchDailyData = async () => {
   try {
     const { data } = await axios.get(`${url}/historical/all?lastdays=all`);
-
     return data;
   } catch (error) {
     return error;
@@ -34,6 +33,15 @@ export const fetchCountries = async () => {
   try {
     const { data } = await axios.get(`${url}/countries`);
     return data.map((data) => data.country);
+  } catch (error) {
+    return error;
+  }
+};
+
+export const fetchCountriesData = async () => {
+  try {
+    const { data } = await axios.get(`${url}/countries`);
+    return data;
   } catch (error) {
     return error;
   }

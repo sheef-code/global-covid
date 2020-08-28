@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@material-ui/core";
-import styles from "./MapPage.module.css";
-
 import Table from "../../components/Table/Table";
+import { fetchCountriesData } from "../../api/";
 import { sortData } from "../../util/util";
 import Map from "../../components/Map/Map";
+import mapPageStyles from "./MapPage.module.css";
 
 const MapPage = () => {
   const [mapCountries, setMapCountries] = useState([]);
@@ -15,25 +15,21 @@ const MapPage = () => {
 
   useEffect(() => {
     const getCountriesData = async () => {
-      fetch("https://disease.sh/v3/covid-19/countries")
-        .then((response) => response.json())
-        .then((data) => {
-          let sortedData = sortData(data);
-          setMapCountries(data);
-          setTableData(sortedData);
-        });
+      const dataSet = await fetchCountriesData();
+      let sortedData = sortData(dataSet);
+      setMapCountries(dataSet);
+      setTableData(sortedData);
     };
-
     getCountriesData();
   }, []);
 
   return (
-    <div className={styles.app}>
-      <div className={styles.app__header}>
+    <div className={mapPageStyles.app}>
+      <div className={mapPageStyles.header}>
         <h1>GLOBAL MAP VIEW</h1>
       </div>
-      <div className={styles.content}>
-        <div className={styles.app__left}>
+      <div className={mapPageStyles.content}>
+        <div className={mapPageStyles.left}>
           <Map
             countries={mapCountries}
             casesType={casesType}
@@ -41,9 +37,9 @@ const MapPage = () => {
             zoom={mapZoom}
           />
         </div>
-        <Card className={styles.app__right}>
+        <Card className={mapPageStyles.right}>
           <CardContent>
-            <div className={styles.app__information}>
+            <div className={mapPageStyles.information}>
               <h3>Most Cases By Country</h3>
               <Table countries={tableData} />
             </div>

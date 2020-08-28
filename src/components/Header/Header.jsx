@@ -18,8 +18,8 @@ const Header = () => {
 
   return (
     <div className={headerStyle.header}>
-      <div className={headerStyle.wrapper}>
-        <Link className={headerStyle.logoWrap} to="/">
+      <div className={headerStyle.content}>
+        <Link className={headerStyle.logoContainer} to="/">
           <img className={headerStyle.logo} src={logo} alt="logo" />
         </Link>
         <div className={headerStyle.menuIcon} onClick={handleClick}>
@@ -35,7 +35,7 @@ const Header = () => {
             />
           )}
         </div>
-        <div className={headerStyle.title}>Global Covid</div>
+        <div className={headerStyle.title}>Global Covid Track</div>
         <ul className={clicked ? headerStyle.listActive : headerStyle.list}>
           <Link className={headerStyle.link} to="/" onClick={linkClick}>
             Home

@@ -1,23 +1,23 @@
 import React from "react";
 import { Card, CardContent } from "@material-ui/core";
 import { information } from "../../information/information";
-import styles from "./AboutPage.module.css";
+import aboutStyles from "./AboutPage.module.css";
 
 const AboutPage = () => {
   let keyValue = 1;
   return (
-    <div className={styles.app}>
-      <div className={styles.app__header}>
+    <div className={aboutStyles.app}>
+      <div className={aboutStyles.header}>
         <h1>ABOUT CORONAVIRUS</h1>
       </div>
-      <div className={styles.content}>
-        <Card className={styles.card1}>
+      <div className={aboutStyles.content}>
+        <Card className={aboutStyles.card1}>
           <CardContent>
             <h1>Overview</h1>
             <p>{information.overview}</p>
           </CardContent>
         </Card>
-        <Card className={styles.card2}>
+        <Card className={aboutStyles.card2}>
           <CardContent>
             <h1>Symptoms</h1>
             <p>
@@ -33,7 +33,7 @@ const AboutPage = () => {
             </p>
           </CardContent>
         </Card>
-        <Card className={styles.card1}>
+        <Card className={aboutStyles.card1}>
           <CardContent>
             <h1>Prevention</h1>
             <p>
@@ -43,7 +43,7 @@ const AboutPage = () => {
             </p>
           </CardContent>
         </Card>
-        <Card className={styles.card2}>
+        <Card className={aboutStyles.card2}>
           <CardContent>
             <h1>Treatment</h1>
             <p>
