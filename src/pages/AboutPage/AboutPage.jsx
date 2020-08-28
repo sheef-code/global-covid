@@ -4,6 +4,7 @@ import { information } from "../../information/information";
 import styles from "./AboutPage.module.css";
 
 const AboutPage = () => {
+  let keyValue = 1;
   return (
     <div className={styles.app}>
       <div className={styles.app__header}>
@@ -21,13 +22,13 @@ const AboutPage = () => {
             <h1>Symptoms</h1>
             <p>
               {information.symptoms.map((symptom) => (
-                <li>{symptom}</li>
+                <li key={keyValue++}>{symptom}</li>
               ))}
             </p>
             <span style={{ color: "#000" }}>Seek help if you experience:</span>
             <p>
               {information.emergency.map((problem) => (
-                <li>{problem}</li>
+                <li key={keyValue++}>{problem}</li>
               ))}
             </p>
           </CardContent>
@@ -37,7 +38,7 @@ const AboutPage = () => {
             <h1>Prevention</h1>
             <p>
               {information.prevention.map((help) => (
-                <li>{help}</li>
+                <li key={keyValue++}>{help}</li>
               ))}
             </p>
           </CardContent>
@@ -47,7 +48,7 @@ const AboutPage = () => {
             <h1>Treatment</h1>
             <p>
               {information.treatment.map((treat) => (
-                <li>{treat}</li>
+                <li key={keyValue++}>{treat}</li>
               ))}
             </p>
           </CardContent>

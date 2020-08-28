@@ -5,7 +5,6 @@ import "leaflet/dist/leaflet.css";
 import "./Map.styles.css";
 
 const Map = ({ countries, casesType, center, zoom }) => {
-  console.log(center);
   return (
     <div className="map">
       <LeafletMap center={center} zoom={zoom} style={{ width: "100%" }}>

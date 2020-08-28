@@ -1,7 +1,6 @@
 .header {
   height: 4rem;
-  width: calc(100% + 24px);
-  margin: -12px;
+  width: 100%;
   background: #3f51b5;
   display: flex;
   align-items: center;
@@ -22,8 +21,21 @@
   align-items: center;
   width: 100%;
 }
+.menuIcon {
+  display: none;
+}
+.list a {
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 
-.wrapper a {
+.listActive {
+  opacity: 1;
+}
+
+.listActive a {
   color: #fff;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -44,4 +56,62 @@
 
 .link:hover {
   background: #6270c2;
+}
+
+@media (max-width: 1000px) {
+  .logoWrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .title {
+    display: none;
+  }
+  .listActive {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    width: 100%;
+    height: 172px;
+    color: #fff;
+    position: absolute;
+    top: 46px;
+    left: 0px;
+    z-index: 10000;
+    background: #3f51b5;
+    transition: all 200ms ease-in;
+    padding: 0rem;
+    border-top: 1px dashed #fff;
+    box-shadow: 0px 5px 5px 0px #ccc;
+  }
+  .menuIcon {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0rem 1rem;
+  }
+  .list {
+    display: none;
+  }
+
+  .link {
+    border-left: none;
+    border-bottom: 1px dashed #fff;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    justify-content: center;
+    display: flex;
+  }
+
+  .link:last-child {
+    margin: 0rem;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px dashed #fff;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    justify-content: center;
+    display: flex;
+  }
 }

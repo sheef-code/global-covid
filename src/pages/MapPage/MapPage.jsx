@@ -11,7 +11,7 @@ const MapPage = () => {
   const [tableData, setTableData] = useState([]);
   const [casesType] = useState("cases");
   const [mapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
-  const [mapZoom] = useState(3);
+  const [mapZoom] = useState(2);
 
   useEffect(() => {
     const getCountriesData = async () => {
