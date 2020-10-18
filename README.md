@@ -1,7 +1,8 @@
-##Live Demo
+
+## Live Demo
 https://globalcovidtrack.herokuapp.com/
 
-##Technologies Used
+## Technologies Used
 • React • Material UI • React Leaflet • Chart JS
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
