@@ -7,6 +7,12 @@ https://globalcovidtrack.herokuapp.com/
 ## Technologies Used
 • React • Material UI • React Leaflet • Chart JS
 
+## Installing 
+1. Install dependencies
+```
+npm i
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
