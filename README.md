@@ -1,3 +1,5 @@
+## Global Covid Track
+A complete Coronavirus tracker used to keep track of the current number of total cases, recoveries, and deaths caused by Coronavirus worldwide. 
 
 ## Live Demo
 https://globalcovidtrack.herokuapp.com/
